@@ -1,0 +1,25 @@
+*{
+    font-size: 20px;
+
+}
+
+img{
+    border-radius: 75%;
+    width: 170px;
+    box-shadow: rgb(129, 122, 122) 0.1em 0.2em 0.3em;
+}
+
+.infP{
+    padding: 10px;
+}
+
+td, th{
+    padding: 19px 0;
+    border: solid rgb(186, 184, 184) 1px;
+}
+
+.coiso{
+    align-items: center;
+    justify-content:center ;
+    padding-left: 250px;
+}

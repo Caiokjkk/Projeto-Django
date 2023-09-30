@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <!-- <h4>Informações aparecerão aqui para destinada pessoa</h4> -->
+    <img src="{{pessoa.foto.url}}" alt="imagem de {{pessoa.nome}}">
+    <h3 class="m-2 pb-2">{{ pessoa.nome }}</h3>
+
+
+
+    <div class="infP">
+        <h4>Informações Pessoais</h4>
+        <div class="row">
+            <div class="col-12">
+
+                <p>Idade: {{pessoa.idade}}</p>
+                <p>CPF:{{pessoa.cpf}}</p>
+            </div>
+
+            <h4>Endereço</h4>
+            <div class="col-12">
+                <p>CEP: {{pessoa.cep}}</p>
+                <p>Cidade: {{pessoa.cidade}}</p>
+                <p>Bairro: {{pessoa.bairro}}</p>
+                <p>Rua: {{pessoa.rua}}</p>
+            </div>
+
+            <h4>Contatos</h4>
+            <div class="col-12">
+                <p>Email: {{pessoa.email}}</p>
+                <p>Telefone: {{pessoa.telefone}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <td>
+            <a href="{% url 'index' %}" class="btn btn-secondary btn m-4">Voltar</a>
+        </td>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

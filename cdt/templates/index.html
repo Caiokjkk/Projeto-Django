@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if pessoas %}
+
+<div class="coiso">
+    <table class="col-md-4 w-75">
+    <tr class="text-center col-md-4">
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Visualizar</th>
+    </tr>
+
+    {% for pessoa in pessoas %}
+    
+    <tr class="text-center col-md-4">
+        
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.email}}</td>
+        <td >
+            <a href="{% url 'pessoa' id=pessoa.id %}" class="btn btn-secondary btn-sm">Visualizar</a>
+        </td>
+    </tr>
+    
+    {% endfor %}
+</table>
+</div>
+
+
+{% else %}
+<p> sem pessoas para apresentar no momento </p>
+
+{% endif %}
+{% endblock %}
